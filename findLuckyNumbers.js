@@ -1,7 +1,8 @@
-luckyArr = []
-let i = 0
+
 function luckyNum(n){
-   
+    luckyArr = []
+    let i = 0
+    
     while(i < n){
         
         let x = Math.floor((Math.random() * 10)+1)
