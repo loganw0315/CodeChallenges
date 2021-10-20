@@ -15,5 +15,4 @@ function luckyNum(n){
     }
     return luckyArr
 }
-
 console.log(luckyNum(10));
