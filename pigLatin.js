@@ -1,14 +1,23 @@
 // Write your solution below:
 const pigLatin = phrase => {
     let arr = phrase.split(" ");
-
+    let vowels = ['a', 'e', 'i', 'o', 'u'];
+    let result = false;
     let newArr = arr.map(elem => {
-        if(elem.startsWith('a','i','e','o','u')){
-        elem = elem + 'yay'
-    }else{
-        newString = elem.substring(1);
-        elem = newString + elem[0] + 'ay'
-    }
+        for(let i = 0; i < vowels.length - 1; i++){
+            if(elem.indexOf(vowels[i]) == 0){
+                result = true;
+            }
+        }
+        if(result == true){
+            elem = elem + 'yay'
+            
+        }else{
+            newString = elem.substring(1);
+            elem = newString + elem[0] + 'ay'
+        }
+        
+    
         return elem;
     }
     
@@ -19,3 +28,4 @@ const pigLatin = phrase => {
 }
 
 console.log(pigLatin('porcupines are cute'));
+
